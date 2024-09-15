@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.head{
+  display: flex;
+  align-items: center;
+  padding: 0px 50px;
+  justify-content: space-around;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 99;
+}
+.head h4{
+  font-size: 8px;
+  padding-top: 10px;
+  color: white;
+}
+.head a{
+  text-decoration: none;
+  border: 1px solid rgba(94, 205, 94, 0.445);
+  border-radius: 70px;
+  box-shadow: 0 0 1px 1px rgba(94, 205, 94, 0.445);
+  width: 80px;
+  height: 22px;
+  font-size: 8px;
+  text-align: center;
+  justify-content: center;
+  padding: 4px;
+  background: black;
+  color: white;
+}
+.cursor{
+    width: 10px;
+    height: 10px;
+    background: greenyellow;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 100;
+}
+.cursor-blur{
+    width: 150px;
+    height: 150px;
+    background: rgba(172, 255, 47, 0.317);
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(10px);
+    z-index: 1;
+}
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+}
+.eat-h1 {
+  font-size: 50px;
+  letter-spacing: 3px;
+  font-weight: 950;
+  color: whitesmoke;
+  text-shadow: -1px -1px 0 black, -2px -2px 0 #95c11e;
+}
+.main {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.234);
+}
+.page1{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10px;
+}
+.page2{
+    width: 100%;
+    height: 100vh;
+    z-index: 10px;
+}
+.scroller{
+  /* background-color: red; */
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 10;
+}
+.scroller::-webkit-scrollbar{
+  display: none;
+}
+.scroller-in{
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: scroll;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+}
+.scroller h4{
+  display: inline-block;
+  color: white;
+  font-size: 40px;
+  font-weight: 900;
+  margin-right: 10px;
+  color: transparent;
+  -webkit-text-stroke: 1px greenyellow;
+  transition: all linear 0.5s;
+}
+.scroller-in :hover{
+  color: greenyellow;
+}
+.about{
+display: flex;
+justify-content: space-around;
+width: 100%;
+height: 200px;
+align-items: center;
+margin-top: 30px;
+position: relative;
+z-index: 10;
+}
+.aboutdata{
+  text-align: center;
+  width: 50%;
+}
+.aboutdata h3{
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 15px;
+}
+.aboutdata h5{
+  font-size: 10px;
+  font-weight: 350;
+  color: white;
+  line-height: 17px;
+}
+.cardscontainer{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 30px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+#card{
+  height: 90%;
+  width: 27%;
+  border-radius: 10px;
+  transition: all ease 0.6s;
+}
+.card1{
+  background-image: url(Images/toptracer1.avif);
+  background-size: cover;
+  background-position: center;
+
+}
+.card2{
+  background-image: url(Images/hero2.avif);
+  background-size: cover;
+  background-position: center;
+}
+.card3{
+  background-image: url(Images/lessons3.avif);
+  background-size: cover;
+  background-position: center;
+}
+.overlay{
+  background-color: #95c11e;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 30px 15px;
+  opacity: 0;
+  transition: all ease 0.6s;
+}
+.overlay h3{
+  font-size: 15px;
+  font-weight: 900;
+}
+.overlay p{
+  font-size: 10px;
+  margin-top: 5px;
+}
+#card:hover .overlay{
+  opacity: 1;
+}
+#card:hover{
+  transform: rotate3d(-1,1,0,20deg);
+}
+.dotsline{
+  background: conic-gradient(from -200deg at 75% 110%, lawngreen,rgb(22, 128, 1));
+  width: 100%;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.dotsline h4{
+  font-size: 15px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 13px;
+}
+.fooddrink{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 15px;
+  padding: 0px 50px;
+}
+.fooddrink img{
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+}
+.fooddata{
+  width: 35%;
+  margin-top: 20px;
+}
+.fooddata p{
+  font-size: 10px;
+  color: white;
+}
+.fooddata a{
+  font-size: 9px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid greenyellow;
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+.footer{
+  width: 100%;
+  height: 180px;
+  background: conic-gradient(from -160deg at 75% 110%, lawngreen,rgb(22, 128, 1));
+  display: flex;
+  text-transform: uppercase;
+}
+.imgfooter{
+  background-image: url(Images/dotos.svg);
+  width: 150px;
+  height: 180px;
+  background-size: cover;
+  position: relative;
+}
+.imgfooter img{
+margin-top: 50px;
+margin-left: 80px;
+}
+.start{
+  /* background: red; */
+  width: 22%;
+  height: 180px;
+}
+.footerlast{
+  display: flex;
+  flex-direction: column;
+}
+.topfooter{
+  width: 100%;
+  height: 165px;
+  /* background: blue; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.btn1 h3{
+  font-size: 12px;
+  font-weight: 800;
+}
+.btn2 h3{
+  font-size: 12px;
+  font-weight: 800;
+  margin-left: 30px;
+}
+.btn3 p{
+  font-size: 9px;
+  margin-left: 30px;
+}
+.btn3 h3{
+  font-size: 9px;
+  font-weight: 900;
+  margin-right: 50px;
+  margin-left: 30px;
+}
+.lastfooter{
+  display: flex;
+  font-size: 10px;
+}
+.bottomfooter{
+  display: flex;
+  gap: 53px;
+}
+.bottomfooter div{
+  font-size: 7px;
+  display: flex;
+}
+
+@keyframes scroll{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
